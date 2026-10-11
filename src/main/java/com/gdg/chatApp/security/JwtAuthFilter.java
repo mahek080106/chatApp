@@ -1,4 +1,4 @@
-package com.gdg.security;
+package com.gdg.chatApp.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -13,6 +13,8 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 import java.util.List;
 
+// Runs on every request. If the request has a valid
+// "Authorization: Bearer <token>" header, the user is marked as logged in.
 @Component
 public class JwtAuthFilter extends OncePerRequestFilter {
 

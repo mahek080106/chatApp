@@ -1,4 +1,4 @@
-package com.gdg.security;
+package com.gdg.chatApp.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
@@ -11,7 +11,7 @@ import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
-
+// Creates and checks JWT tokens.
 @Component
 public class JwtUtil {
 
@@ -24,7 +24,7 @@ public class JwtUtil {
         this.expirationMs = expirationMs;
     }
 
-    
+    // The token stores the user's email as its "subject"
     public String generateToken(String email) {
         Date now = new Date();
         return Jwts.builder()
