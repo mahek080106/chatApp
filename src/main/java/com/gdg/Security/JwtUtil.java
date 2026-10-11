@@ -1,4 +1,4 @@
-package com.gdg.chatApp.security;
+package com.gdg.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
